@@ -9,8 +9,8 @@ tasks:
       php artisan key:generate &&
       php artisan migrate --seed
     command: >
-      bash s-.gp/start.serv.sh
-      
+      php -S 0.0.0.0:8000 -t public
+
 vscode:
   extensions:
     - ms-vscode.test-adapter-converter
@@ -70,4 +70,4 @@ vscode:
     - blanc-frederic.vs-phpcompanion
     - junstyle.php-cs-fixer
     - IgorSbitnev.error-gutters
-    - ErnestDong.DBCC      
+    - ErnestDong.DBCC
