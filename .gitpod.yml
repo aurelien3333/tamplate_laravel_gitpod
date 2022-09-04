@@ -10,3 +10,64 @@ tasks:
       php artisan migrate --seed
     command: >
       php -S 0.0.0.0:8000 -t public
+      
+vscode:
+  extensions:
+    - ms-vscode.test-adapter-converter
+    - DEVSENSE.phptools-vscode
+    - onecentlin.laravel-extension-pack
+    - absszero.vscode-laravel-goto
+    - ctf0.laravel-goto-controller
+    - ctf0.laravel-goto-view
+    - ctf0.laravel-goto-env
+    - amiralizadeh9480.laravel-extra-intellisense
+    - MrChetan.laravel-goto-config
+    - ctf0.laravel-goto-lang
+    - tiansin.vscode-laravel-assist
+    - entexa.tall-stack
+    - lennardv.livewire-goto-updated
+    - austenc.livewire-docs
+    - onecentlin.laravel-blade
+    - Zignd.html-css-class-completion
+    - christian-kohler.path-intellisense
+    - zobo.php-intellisense
+    - christian-kohler.npm-intellisense
+    - aurorabiz.blade-ui-kit
+    - MS-CEINTL.vscode-language-pack-fr
+    - donjayamanne.githistory
+    - mhutchie.git-graph
+    - GitHub.vscode-pull-request-github
+    - waderyan.gitblame
+    - codezombiech.gitignore
+    - eamodio.gitlens
+    - bierner.markdown-preview-github-styles
+    - GitHub.copilot
+    - PKief.material-icon-theme
+    - pranaygp.vscode-css-peek
+    - wayou.vscode-todo-highlight
+    - neilbrayfield.php-docblocker
+    - MehediDracula.php-namespace-resolver
+    - DEVSENSE.phptools-vscode
+    - phproberto.vscode-php-getters-setters
+    - MehediDracula.php-constructor
+    - SanderRonde.phpstan-vscode
+    - animus-coop.vscode-phpstorm-formatter
+    - emallin.phpunit
+    - recca0120.vscode-phpunit
+    - blanc-frederic.vs-phpcompanion
+    - damianbal.vs-phpclassgen
+    - predrag-nikolic.php-class-helper
+    - bmewburn.vscode-intelephense-client
+    - zobo.php-intellisense
+    - neilbrayfield.php-docblocker
+    - MehediDracula.php-namespace-resolver
+    - phproberto.vscode-php-getters-setters
+    - linyang95.php-symbols
+    - MehediDracula.php-constructor
+    - ValeryanM.vscode-phpsab
+    - jasonterando.vscode-php-tdd
+    - kotfire.php-add-property
+    - blanc-frederic.vs-phpcompanion
+    - junstyle.php-cs-fixer
+    - IgorSbitnev.error-gutters
+    - ErnestDong.DBCC      
