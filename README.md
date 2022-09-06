@@ -10,5 +10,4 @@ git push
 ```
 
 <center>
-<img src="https://miro.medium.com/max/1400/1*OspLcgBCBlXgD6AdSrqN1A.png">
 </center>

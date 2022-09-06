@@ -8,8 +8,7 @@ tasks:
       npm i &&
       php artisan key:generate &&
       php artisan migrate --seed
-    command: >
-      php -S 0.0.0.0:8000 -t public
+    command: bash .gp/start-serv.sh
 
 vscode:
   extensions:
