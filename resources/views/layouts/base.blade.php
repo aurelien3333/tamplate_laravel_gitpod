@@ -8,7 +8,7 @@
 @endsection
 
 @section("core.body")
-    <di>
+    <div>
         <div>
             <x-header/>
         </div>

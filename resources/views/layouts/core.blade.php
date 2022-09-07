@@ -7,6 +7,10 @@
 
 
     <style>
+        .test{
+            font-size: 1.5rem;
+            background-color: red;
+        }
         [x-cloak]{
             display:none;
         }
