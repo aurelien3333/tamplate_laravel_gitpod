@@ -8,12 +8,34 @@ use App\Models\Question;
 
 class Test extends Component
 {
+    public $step = 1;
+    public $maxStep;
+
+    public function mount()
+    {
+        $this->maxStep = Question::count();
+    }
+
+    public function next()
+    {
+        if($this->step < $this->maxStep) {
+            $this->step++;
+        }
+    }
+
+    public function previous()
+    {
+        if($this->step > 1) {
+            $this->step--;
+        }
+    }
     public function render()
     {
-        $questions = Question::all();
+        $question = Question::find($this->step);
 
         return view('livewire.test', [
-            'questions' => $questions
+            'question' => $question
         ]);
     }
 }
+
