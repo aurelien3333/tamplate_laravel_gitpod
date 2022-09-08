@@ -3,13 +3,26 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Contracts\Repositories\QuestionRepositoryContract;
 use App\Models\Question;
 
 class Test extends Component
 {
     public $step = 1;
     public $maxStep;
+
+    public $question;
+
+    public $reponseSelect = [];
+    public $reponse;
+
+    public $reponses = [
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+    ];
 
     public function mount()
     {
@@ -21,6 +34,9 @@ class Test extends Component
         if($this->step < $this->maxStep) {
             $this->step++;
         }
+        $this->reponseSelect['question'] = $this->step;
+        $this->reponseSelect['reponse'] = $this->reponse;
+        dd($this->reponseSelect);
     }
 
     public function previous()
@@ -31,11 +47,9 @@ class Test extends Component
     }
     public function render()
     {
-        $question = Question::find($this->step);
+        $this->question = Question::find($this->step);
 
-        return view('livewire.test', [
-            'question' => $question
-        ]);
+        return view('livewire.test');
     }
 }
 
