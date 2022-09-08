@@ -16,12 +16,13 @@ class Test extends Component
     public $reponse;
 
     public $reponses = [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
+        'Pas du tout d’accord	',
+        'Pas d’accord	',
+        'Neutre	',
+        'D’accord',
+        'Tout à fait d’accord',
+        'Ne sais pas',
+
     ];
 
     public function mount()
@@ -34,9 +35,7 @@ class Test extends Component
         if($this->step < $this->maxStep) {
             $this->step++;
         }
-        $this->reponseSelect['question'] = $this->step;
-        $this->reponseSelect['reponse'] = $this->reponse;
-        dd($this->reponseSelect);
+
     }
 
     public function previous()
@@ -44,6 +43,24 @@ class Test extends Component
         if($this->step > 1) {
             $this->step--;
         }
+    }
+
+    public function reponse($id)
+    {
+        $this->reponseSelect[$id] =
+        [
+            'question' => $id,
+            'reponse' => $this->reponse,
+        ];
+
+        $this->reponseSelect['reponse'] = $id;
+        $this->step++;
+
+    }
+
+    public function finish()
+    {
+        dd($this->reponseSelect);
     }
     public function render()
     {
