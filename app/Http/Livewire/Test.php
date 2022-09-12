@@ -16,13 +16,31 @@ class Test extends Component
     public $reponse;
 
     public $reponses = [
-        'Pas du tout d’accord	',
-        'Pas d’accord	',
-        'Neutre	',
-        'D’accord',
-        'Tout à fait d’accord',
-        'Ne sais pas',
-
+        [
+            'id' => 1,
+            'reponse' => 'Pas du tout d’accord',
+            'couleur' => '#fdd5d5',
+        ],
+        [
+            'id' => 2,
+            'reponse' => 'Pas d’accord',
+            'couleur' => '#fee8e8',
+        ],
+        [
+            'id' => 3,
+            'reponse' => 'Neutre',
+            'couleur' => '#ffffff',
+        ],
+        [
+            'id' => 4,
+            'reponse' => 'D’accord',
+            'couleur' => '#e6fae9',
+        ],
+        [
+            'id' => 4,
+            'reponse' => 'Tout à fait d’accord',
+            'couleur' => '#b4f1bd',
+        ]
     ];
 
     public function mount()
