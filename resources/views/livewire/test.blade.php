@@ -7,11 +7,11 @@
             {{$question['question']}}
         </div>
 
-        <div class="flex flex-col justify-between my-12">
+        <div class="my-12">
 
-            <div class="flex justify-between px-24">
+            <div class="flex flex-wrap justify-between gap-6 px-24">
                 @foreach ($reponses as $reponse)
-                    <div>
+                    <div class="flex flex-col items-center justify-start">
                         <div class="w-16 h-16 border border-gray-600 rounded-full shadow-xl cursor-pointer" wire:click='reponse({{$reponse['id']}})' style="background-color: {{$reponse['couleur']}}"></div>
                         <div class="text-[10px] font-bold text-center mt-2 w-16">{{$reponse['reponse']}}</div>
                     </div>
@@ -19,12 +19,18 @@
 
             </div>
             <div class="flex flex-row justify-around mt-12">
-                <div class="btn" wire:click="previous">Précedent</div>
+
+                    @if($step > 1)
+                        <div class="bg-red-600 btn" wire:click="previous">Précedent</div>
+                    @else
+                        <a class="block bg-red-600 btn" href="{{route('home')}}">Annuler</a>
+                    @endif
+
                 <div>
                     @if($step == $maxStep)
-                        <div class="btn" wire:click="finish">Terminer</div>
+                        <div class="bg-green-600 btn" wire:click="finish">Terminer</div>
                     @else
-                        <div class="text-white bg-green-600 border border-green-700 shadow-xl btn" wire:click="next">Suivant</div>
+                        <div class="bg-green-600 border border-green-700 shadow-xl btn" wire:click="next">Suivant</div>
                     @endif
                 </div>
             </div>

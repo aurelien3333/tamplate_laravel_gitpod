@@ -56,6 +56,8 @@ class Test extends Component
 
     }
 
+
+
     public function previous()
     {
         if($this->step > 1) {
