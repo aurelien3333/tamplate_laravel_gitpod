@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[ HomeController::class, 'index' ])->name('home');
+Route::get('/pre-test',[ TestController::class, 'preTest' ])->name('pre-test');
 Route::get('/test',[ TestController::class, 'index' ])->name('test');
 
 Route::middleware([

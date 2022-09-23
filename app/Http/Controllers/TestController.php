@@ -10,4 +10,9 @@ class TestController extends Controller
     {
         return view('app.test.index');
     }
+
+    public function preTest()
+    {
+        return view('app.test.pre-test');
+    }
 }
